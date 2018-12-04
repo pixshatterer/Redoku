@@ -5,7 +5,7 @@ pipeline {
         stage('Build Assets') {
           agent any 
           steps {
-            nodejs(nodeJSInstallationName: 'Node 6.x', configId: '<config-file-provider-id>') {
+            nodejs(nodeJSInstallationName: 'Node 11.x', configId: 'latest') {
               sh 'npm config ls'
             }
           }
